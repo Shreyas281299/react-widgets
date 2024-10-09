@@ -1,26 +1,27 @@
-import {compose} from 'recompose';
-import {constructWebexEnhancer, withIntl} from '@webex/webex-widget-base';
-import {enhancer as mercuryEnhancer} from '@webex/redux-module-mercury';
+import { compose } from "recompose";
+import { constructWebexEnhancer, withIntl } from "@webex/webex-widget-base";
+import { enhancer as mercuryEnhancer } from "@webex/redux-module-mercury";
 
-import reducers from './reducer';
-import ConnectedSpace from './container';
-import messages from './translations/en';
-import events from './events';
-import {destinationTypes} from './constants';
+import reducers from "./reducer";
+import ConnectedSpace from "./container";
+import messages from "./translations/en";
+import events from "./events";
+import { destinationTypes } from "./constants";
 
-const {eventNames} = events;
+const { eventNames } = events;
+console.log("testing");
 
-export {eventNames};
+export { eventNames };
 
-export {reducers};
+export { reducers };
 
-export {destinationTypes};
+export { destinationTypes };
 
 export default compose(
   constructWebexEnhancer({
-    name: 'space',
-    reducers
+    name: "space",
+    reducers,
   }),
   mercuryEnhancer,
-  withIntl({locale: 'en', messages})
+  withIntl({ locale: "en", messages })
 )(ConnectedSpace);
