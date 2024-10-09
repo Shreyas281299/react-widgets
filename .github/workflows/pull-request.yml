@@ -52,11 +52,11 @@ jobs:
         with:
           node-version: 20.13.1
 
-      - name: Restore npm cache
+      - name: Uncache Dependencies
         uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          path: "**/node_modules"
+          key: node-modules-${{ hashFiles('./yarn.lock') }}
 
       - name: Run eslint
         run: npm run eslint -- --format junit -o reports/junit/js-lint-results.xml
@@ -121,55 +121,3 @@ jobs:
         with:
           name: integration-test-results
           path: reports/junit/wdio
-
-  version_and_publish:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20.13.1
-
-      - name: Generate Version Number
-        run: |
-          npm run release -- --release-as minor --no-verify
-          echo VERSION_NUMBER=$(npx -c 'echo "$npm_package_version"') >> $GITHUB_ENV
-
-      - name: Build for CDN
-        run: |
-          export NODE_ENV=production
-          BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${{ env.VERSION_NUMBER }}/" npm run build:package widget-space
-          BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${{ env.VERSION_NUMBER }}/" npm run build sri widget-space
-
-      - name: Push to GitHub and Publish to NPM
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          git push origin HEAD:main
-          git push --tags
-          npm run publish:components
-
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-packages
-          path: packages/@webex/widget-space/dist
-
-  deploy_to_cdn:
-    runs-on: ubuntu-latest
-    needs: version_and_publish
-    env:
-      AWS_BUCKET: code.s4d.io
-      AWS_REGION: us-east-1
-    steps:
-      - name: Set up AWS CLI
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-east-1
-
-      - name: Sync to S3
-        run: |
-          aws s3 sync ./packages/@webex/widget-space/dist s3://${{ env.AWS_BUCKET }}/widget-space/latest
