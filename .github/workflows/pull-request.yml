@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  install:
+  initialize:
     runs-on: ubuntu-latest
     env:
       AWS_BUCKET: code.s4d.io
@@ -28,21 +28,19 @@ jobs:
       - name: Clean npm cache
         run: npm cache clean --force
 
-      - name: Install dependencies
+      - name: initialize dependencies
         run: npm ci --force
 
-      - name: Save NPM install log
-        run: npm ls --json > npm_install.log || true
-
-      - name: Upload NPM install log as an artifact
-        uses: actions/upload-artifact@v3
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        if: steps.validate-dependencies.outputs.cache-hit != 'true'
         with:
-          name: npm-install-log
-          path: npm_install.log
+          path: "**/node_modules"
+          key: node-modules-${{ hashFiles('./yarn.lock') }}
 
   unit_tests_and_linting:
     runs-on: ubuntu-latest
-    needs: install
+    needs: initialize
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -75,7 +73,7 @@ jobs:
 
   build_for_tests:
     runs-on: ubuntu-latest
-    needs: install
+    needs: initialize
     env:
       FEDERATION: true
       NODE_ENV: test
@@ -88,6 +86,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.13.1
+
+      - name: Uncache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: "**/node_modules"
+          key: node-modules-${{ hashFiles('./yarn.lock') }}
 
       - name: Build for test
         run: npm run build journey dist-test
@@ -113,8 +117,94 @@ jobs:
         with:
           node-version: 20.13.1
 
+      - name: Create Environment Variables
+        run: |
+          touch .env
+          echo "WEBEX_CONVERSATION_DEFAULT_CLUSTER=urn:TEAM:us-east-1_a:identityLookup" >> .env
+          echo "WEBEX_TEST_USERS_CONVERSATION_SERVICE_URL=https://conv-a.wbx2.com/conversation/api/v1" >> .env
+          echo "IDBROKER_BASE_URL=https://idbroker.webex.com" >> .env
+          echo "U2C_SERVICE_URL=https://u2c.wbx2.com/u2c/api/v1" >> .env
+          echo "WDM_SERVICE_URL=https://wdm-a.wbx2.com/wdm/api/v1" >> .env
+          cat .env
+
+      - name: Uncache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: "**/node_modules"
+          key: node-modules-${{ hashFiles('./yarn.lock') }}
+
+      - name: initialize WebDriver dependencies
+        run: |
+          npm initialize -g webdriver-manager
+          webdriver-manager update
+
+      - name: initialize Chrome browser
+        run: |
+          sudo apt-get update
+          sudo apt-get initialize -y google-chrome-stable
+
+      - name: Start Xvfb
+        run: |
+          sudo apt-get initialize -y xvfb
+          Xvfb :99 & export DISPLAY=:99
+
       - name: Run integration tests on Chrome
         run: BROWSER=chrome npm run test:integration
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: integration-test-results
+          path: reports/junit/wdio
+
+  journey_tests_firefox:
+    runs-on: ubuntu-latest
+    needs: build_for_tests
+    env:
+      SAUCE: true
+      STATIC_SERVER_PATH: dist-test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.13.1
+
+      - name: Create Environment Variables
+        run: |
+          touch .env
+          echo "WEBEX_CONVERSATION_DEFAULT_CLUSTER=urn:TEAM:us-east-1_a:identityLookup" >> .env
+          echo "WEBEX_TEST_USERS_CONVERSATION_SERVICE_URL=https://conv-a.wbx2.com/conversation/api/v1" >> .env
+          echo "IDBROKER_BASE_URL=https://idbroker.webex.com" >> .env
+          echo "U2C_SERVICE_URL=https://u2c.wbx2.com/u2c/api/v1" >> .env
+          echo "WDM_SERVICE_URL=https://wdm-a.wbx2.com/wdm/api/v1" >> .env
+          cat .env
+
+      - name: Uncache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: "**/node_modules"
+          key: node-modules-${{ hashFiles('./yarn.lock') }}
+
+      - name: initialize WebDriver dependencies
+        run: |
+          npm initialize -g webdriver-manager
+          webdriver-manager update
+
+      - name: initialize Firefox browser
+        run: |
+          sudo apt-get update
+          sudo apt-get initialize -y firefox
+
+      - name: Start Xvfb
+        run: |
+          sudo apt-get initialize -y xvfb
+          Xvfb :99 & export DISPLAY=:99
+
+      - name: Run integration tests on Firefox
+        run: BROWSER=firefox npm run test:integration
 
       - name: Upload test results
         uses: actions/upload-artifact@v3
