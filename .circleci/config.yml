@@ -1,24 +1,22 @@
 # Main Config
 version: 2.1
 
-# Orb to grab `s3` capability for us
-orbs:
-  aws-cli: circleci/aws-cli@3.1.4
-  aws-s3: circleci/aws-s3@3.0.0
-  jq: circleci/jq@1.9.0
-  node: circleci/node@20.17.0
-
 # reusable environment for all jobs
 executors:
   main-executor:
     working_directory: ~/react-widgets
     docker:
-      - image: cimg/node:20.17.0-browsers
+      - image: circleci/node:fermium
         # environment variables for all commands executed in the main-executor
         environment:
           AWS_BUCKET: code.s4d.io
           AWS_REGION: us-east-1
 
+# Orb to grab `s3` capability for us
+orbs:
+  aws-cli: circleci/aws-cli@3.1.4
+  aws-s3: circleci/aws-s3@3.0.0
+  jq: circleci/jq@1.9.0
 
 # Reusable commands for jobs
 commands:
@@ -45,16 +43,6 @@ commands:
           command: aws cloudfront create-invalidation --distribution-id ${AWS_DISTRIBUTION_ID} --paths "/*"
 
 jobs:
-  install-node-yarn:
-      docker:
-        - image: cimg/base:stable
-      steps:
-        - checkout
-        - node/install:
-            install-yarn: true
-            node-version: '16.13'
-        - run: node --version
-
   install:
     executor: main-executor
     steps:
@@ -62,11 +50,9 @@ jobs:
       - run:
           name: "Yarn cache clean"
           command: yarn cache clean
-
       - run:
           name: "Install dependencies"
           command: yarn workspaces focus --all
-            yarn --version
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
           key: yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
@@ -408,7 +394,6 @@ jobs:
 workflows:
   run_all_tests:
     jobs:
-      - install-node-yarn
       - install:
           filters:
             branches:
