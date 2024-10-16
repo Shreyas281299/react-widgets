@@ -54,8 +54,10 @@ jobs:
           name: "Install dependencies"
           command: yarn workspaces focus --all
       - run:
-          name: "Install yarn"
-          command: corepack enable && yarn set version berry
+          name: "Install Yarn 4.5.0"
+          command: |
+            npm install -g yarn@4.5.0
+            yarn --version
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
           key: yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
