@@ -51,12 +51,12 @@ jobs:
           name: "Yarn cache clean"
           command: yarn cache clean
       - run:
-          name: "Install dependencies"
-          command: yarn workspaces focus --all
-      - run:
           name: "Install Yarn 4.5.0"
           command: |
             npm install -g yarn@4.5.0
+      - run:
+          name: "Install dependencies"
+          command: yarn workspaces focus --all
             yarn --version
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
