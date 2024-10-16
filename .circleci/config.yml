@@ -6,8 +6,7 @@ executors:
   main-executor:
     working_directory: ~/react-widgets
     docker:
-      - image: circleci/node:fermium
-        # environment variables for all commands executed in the main-executor
+      - image: circleci/node:20 # Updated to use Node 20
         environment:
           AWS_BUCKET: code.s4d.io
           AWS_REGION: us-east-1
@@ -29,8 +28,8 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-            - yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-
+            - yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-
   aws-cloudfront-invalidation:
     parameters:
       cloudfront-id:
@@ -48,19 +47,16 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Install Yarn"
+          command: yarn set verions berry
+      - run:
           name: "Yarn cache clean"
           command: yarn cache clean
       - run:
-          name: "Install Yarn 4.5.0"
-          command: |
-            yarn set version berry
-      - run:
           name: "Install dependencies"
-          command: yarn workspaces focus --all
-            yarn --version
-      # Cache Yarn and workspace dependencies across different CircleCI runs
+          command: yarn install --frozen-lockfile
       - save_cache:
-          key: yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
           paths:
             - .yarn/cache
             - node_modules
