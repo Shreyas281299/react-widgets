@@ -1,14 +1,14 @@
 # Main Config
 version: 2.1
 
-# reusable environment for all jobs
+# reusable envfermiumment for all jobs
 executors:
   main-executor:
     working_directory: ~/react-widgets
     docker:
-      - image: circleci/node:iron
-        # environment variables for all commands executed in the main-executor
-        environment:
+      - image: circleci/node:fermium
+        # envfermiumment variables for all commands executed in the main-executor
+        envfermiumment:
           AWS_BUCKET: code.s4d.io
           AWS_REGION: us-east-1
 
@@ -17,6 +17,8 @@ orbs:
   aws-cli: circleci/aws-cli@3.1.4
   aws-s3: circleci/aws-s3@3.0.0
   jq: circleci/jq@1.9.0
+  node: circleci/node@6.2.0
+
 
 # Reusable commands for jobs
 commands:
@@ -29,8 +31,8 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - yarn-cache-node-iron-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-            - yarn-cache-node-iron-{{ .Environment.CACHE_VERSION }}-
+            - yarn-cache-node-fermium-{{ .Envfermiumment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-node-fermium-{{ .Envfermiumment.CACHE_VERSION }}-
   aws-cloudfront-invalidation:
     parameters:
       cloudfront-id:
@@ -46,6 +48,12 @@ jobs:
   install:
     executor: main-executor
     steps:
+      - node/install:
+          install-pnpm: false 
+          node-version: '20.16.0' 
+      - node/install: 
+          install-yarn: true 
+          yarn-version: '4.5.0' 
       - checkout
       - run:
           name: "Yarn cache clean"
@@ -55,7 +63,7 @@ jobs:
           command: yarn workspaces focus --all --production=false
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
-          key: yarn-cache-node-iron-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node-fermium-{{ .Envfermiumment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
           paths:
             - .yarn/cache
             - node_modules
@@ -79,7 +87,7 @@ jobs:
       - run:
           name: Run all Jest test suites
           command: npm run jest -- --ci -i --reporters="jest-junit"
-          environment:
+          envfermiumment:
             JEST_JUNIT_OUTPUT_NAME: js-jest-results.xml
             JEST_JUNIT_OUTPUT_DIR: reports/junit/jest
       - store_test_results:
@@ -90,7 +98,7 @@ jobs:
 
   build_for_tests:
     executor: main-executor
-    environment:
+    envfermiumment:
       FEDERATION: true
       NODE_ENV: test
       WEBEX_TEST_USERS_CONVERSATION_SERVICE_URL: https://conversation-intb.ciscospark.com/conversation/api/v1
@@ -114,7 +122,7 @@ jobs:
 
   journey_tests_chrome:
     executor: main-executor
-    environment:
+    envfermiumment:
       SAUCE: true
       STATIC_SERVER_PATH: dist-test
       WEBEX_TEST_USERS_CONVERSATION_SERVICE_URL: https://conversation-intb.ciscospark.com/conversation/api/v1
@@ -148,7 +156,7 @@ jobs:
 
   journey_tests_firefox:
     executor: main-executor
-    environment:
+    envfermiumment:
       SAUCE: true
       STATIC_SERVER_PATH: dist-test
       WEBEX_TEST_USERS_CONVERSATION_SERVICE_URL: https://conversation-intb.ciscospark.com/conversation/api/v1
@@ -330,7 +338,7 @@ jobs:
 
   tap_test:
     executor: main-executor
-    environment:
+    envfermiumment:
       SAUCE: true
     steps:
       - checkout
