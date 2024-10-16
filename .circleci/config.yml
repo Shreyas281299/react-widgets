@@ -29,8 +29,8 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-            - yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-
+            - yarn-cache-node-iron-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-node-iron-{{ .Environment.CACHE_VERSION }}-
   aws-cloudfront-invalidation:
     parameters:
       cloudfront-id:
@@ -52,10 +52,10 @@ jobs:
           command: yarn cache clean
       - run:
           name: "Install dependencies"
-          command: yarn workspaces focus --all
+          command: yarn workspaces focus --all --production=false
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
-          key: yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node-iron-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
           paths:
             - .yarn/cache
             - node_modules
