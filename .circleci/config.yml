@@ -54,8 +54,9 @@ jobs:
       - run:
           name: "Remove_existing_yarn"
           command:  sudo rm -f /usr/local/bin/yarn &&  sudo rm -f /usr/local/bin/yarnpkg
-      - node/install: 
-          install-yarn: true 
+      - run :
+          name: "Install yarn"
+          command: yarn set version berry
       - checkout
       - run:
           name: "Yarn cache clean"
