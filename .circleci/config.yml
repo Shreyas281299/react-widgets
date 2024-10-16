@@ -6,7 +6,7 @@ executors:
   main-executor:
     working_directory: ~/react-widgets
     docker:
-      - image: circleci/node:fermium
+      - image: circleci/node:20
         # environment variables for all commands executed in the main-executor
         environment:
           AWS_BUCKET: code.s4d.io
@@ -31,8 +31,8 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-            - yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-
+            - yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-
   aws-cloudfront-invalidation:
     parameters:
       cloudfront-id:
@@ -63,7 +63,7 @@ jobs:
           command: yarn workspaces focus --all --production=false
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
-          key: yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
           paths:
             - .yarn/cache
             - node_modules
