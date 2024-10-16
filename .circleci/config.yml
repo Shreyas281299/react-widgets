@@ -51,9 +51,6 @@ jobs:
       - node/install:
           install-pnpm: false 
           node-version: '20.16.0' 
-      - run:
-          name: "Remove_existing_yarn"
-          command:  sudo rm -f /usr/local/bin/yarn &&  sudo rm -f /usr/local/bin/yarnpkg
       - run :
           name: "Install yarn"
           command: yarn set version berry
