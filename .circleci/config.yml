@@ -6,7 +6,7 @@ executors:
   main-executor:
     working_directory: ~/react-widgets
     docker:
-      - image: circleci/node:fermium
+      - image: circleci/node:iron
         # environment variables for all commands executed in the main-executor
         environment:
           AWS_BUCKET: code.s4d.io
