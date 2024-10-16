@@ -1,14 +1,14 @@
 # Main Config
 version: 2.1
 
-# reusable envfermiumment for all jobs
+# reusable environment for all jobs
 executors:
   main-executor:
     working_directory: ~/react-widgets
     docker:
       - image: circleci/node:fermium
-        # envfermiumment variables for all commands executed in the main-executor
-        envfermiumment:
+        # environment variables for all commands executed in the main-executor
+        environment:
           AWS_BUCKET: code.s4d.io
           AWS_REGION: us-east-1
 
@@ -31,8 +31,8 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - yarn-cache-node-fermium-{{ .Envfermiumment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-            - yarn-cache-node-fermium-{{ .Envfermiumment.CACHE_VERSION }}-
+            - yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-
   aws-cloudfront-invalidation:
     parameters:
       cloudfront-id:
@@ -63,7 +63,7 @@ jobs:
           command: yarn workspaces focus --all --production=false
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
-          key: yarn-cache-node-fermium-{{ .Envfermiumment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
           paths:
             - .yarn/cache
             - node_modules
@@ -87,7 +87,7 @@ jobs:
       - run:
           name: Run all Jest test suites
           command: npm run jest -- --ci -i --reporters="jest-junit"
-          envfermiumment:
+          environment:
             JEST_JUNIT_OUTPUT_NAME: js-jest-results.xml
             JEST_JUNIT_OUTPUT_DIR: reports/junit/jest
       - store_test_results:
@@ -98,7 +98,7 @@ jobs:
 
   build_for_tests:
     executor: main-executor
-    envfermiumment:
+    environment:
       FEDERATION: true
       NODE_ENV: test
       WEBEX_TEST_USERS_CONVERSATION_SERVICE_URL: https://conversation-intb.ciscospark.com/conversation/api/v1
@@ -122,7 +122,7 @@ jobs:
 
   journey_tests_chrome:
     executor: main-executor
-    envfermiumment:
+    environment:
       SAUCE: true
       STATIC_SERVER_PATH: dist-test
       WEBEX_TEST_USERS_CONVERSATION_SERVICE_URL: https://conversation-intb.ciscospark.com/conversation/api/v1
@@ -156,7 +156,7 @@ jobs:
 
   journey_tests_firefox:
     executor: main-executor
-    envfermiumment:
+    environment:
       SAUCE: true
       STATIC_SERVER_PATH: dist-test
       WEBEX_TEST_USERS_CONVERSATION_SERVICE_URL: https://conversation-intb.ciscospark.com/conversation/api/v1
@@ -338,7 +338,7 @@ jobs:
 
   tap_test:
     executor: main-executor
-    envfermiumment:
+    environment:
       SAUCE: true
     steps:
       - checkout
