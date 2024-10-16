@@ -52,7 +52,7 @@ jobs:
           command: yarn cache clean
       - run:
           name: "Install dependencies"
-          command: yarn workspaces focus --all --production=false
+          command: yarn workspaces focus --all
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
           key: yarn-cache-node-fermium-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
