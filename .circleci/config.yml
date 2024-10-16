@@ -56,7 +56,7 @@ jobs:
           command:  sudo rm -f /usr/local/bin/yarn &&  sudo rm -f /usr/local/bin/yarnpkg
       - node/install: 
           install-yarn: true 
-          yarn-version: '4.5.0' 
+          yarn-version: 'berry' 
       - checkout
       - run:
           name: "Yarn cache clean"
