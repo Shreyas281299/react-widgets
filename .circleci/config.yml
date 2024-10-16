@@ -6,7 +6,7 @@ executors:
   main-executor:
     working_directory: ~/react-widgets
     docker:
-      - image: circleci/node:20 # Updated to use Node 20
+      - image: cimg/node:20.13.1-browsers
         environment:
           AWS_BUCKET: code.s4d.io
           AWS_REGION: us-east-1
