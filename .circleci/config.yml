@@ -51,6 +51,10 @@ jobs:
           name: "Yarn cache clean"
           command: yarn cache clean
       - run:
+          name: "Install yarn"
+          command: corepack enable && yarn set version berry
+
+      - run:
           name: "Install dependencies"
           command: yarn workspaces focus --all
             yarn --version
