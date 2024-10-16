@@ -51,6 +51,9 @@ jobs:
       - node/install:
           install-pnpm: false 
           node-version: '20.16.0' 
+      - run:
+          name: "Remove_existing_yarn"
+          command:  sudo rm -f /usr/local/bin/yarn &&  sudo rm -f /usr/local/bin/yarnpkg
       - node/install: 
           install-yarn: true 
           yarn-version: '4.5.0' 
