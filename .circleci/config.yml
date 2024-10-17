@@ -61,10 +61,10 @@ jobs:
           command: yarn cache clean
       - run:
           name: "Install dependencies"
-          command: yarn workspaces focus --all --production=false
+          command: yarn
       # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
-          key: yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          key: node-modules-cache-node-iron-npm-6-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
           paths:
             - .yarn/cache
             - node_modules
