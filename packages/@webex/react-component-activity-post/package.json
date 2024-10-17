@@ -15,9 +15,9 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-activity-item-base": "workspace:*",
-    "@webex/react-component-activity-text": "workspace:*",
-    "@webex/react-component-adaptive-card": "workspace:*",
+    "@webex/react-component-activity-item-base": "0.211.0",
+    "@webex/react-component-activity-text": "0.211.0",
+    "@webex/react-component-adaptive-card": "0.211.0",
     "prop-types": "^15.5.10",
     "react": "^17.0.2"
   },

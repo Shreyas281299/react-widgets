@@ -15,7 +15,7 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-utils": "workspace:*",
+    "@webex/react-component-utils": "0.211.0",
     "immutable": "^3.8.1",
     "react-redux": "^5.0.1",
     "recompose": "^0.26.0",

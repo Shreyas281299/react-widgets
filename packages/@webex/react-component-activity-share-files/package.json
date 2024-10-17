@@ -15,12 +15,12 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-activity-item-base": "workspace:*",
-    "@webex/react-component-activity-text": "workspace:*",
-    "@webex/react-component-adaptive-card": "workspace:*",
-    "@webex/react-component-file-share-display": "workspace:*",
-    "@webex/react-component-utils": "workspace:*",
-    "@webex/react-container-file-downloader": "workspace:*",
+    "@webex/react-component-activity-item-base": "0.211.0",
+    "@webex/react-component-activity-text": "0.211.0",
+    "@webex/react-component-adaptive-card": "0.211.0",
+    "@webex/react-component-file-share-display": "0.211.0",
+    "@webex/react-component-utils": "0.211.0",
+    "@webex/react-container-file-downloader": "0.211.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "^17.0.2"

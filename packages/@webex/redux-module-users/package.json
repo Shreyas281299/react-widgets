@@ -15,9 +15,9 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-utils": "workspace:*",
-    "@webex/redux-module-avatar": "workspace:*",
-    "@webex/redux-module-presence": "workspace:*",
+    "@webex/react-component-utils": "0.211.0",
+    "@webex/redux-module-avatar": "0.211.0",
+    "@webex/redux-module-presence": "0.211.0",
     "immutable": "^3.8.1"
   },
   "version": "0.211.0",

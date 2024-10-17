@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "@momentum-ui/react": "23.27.11",
-    "@webex/react-component-utils": "workspace:*",
+    "@webex/react-component-utils": "0.211.0",
     "adaptivecards": "^2.0.0",
     "classnames": "^2.2.5",
     "react": "^17.0.2",

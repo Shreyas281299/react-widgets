@@ -15,10 +15,10 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-activity-post": "workspace:*",
-    "@webex/react-component-activity-share-files": "workspace:*",
-    "@webex/react-component-activity-system-message": "workspace:*",
-    "@webex/react-component-utils": "workspace:*",
+    "@webex/react-component-activity-post": "0.211.0",
+    "@webex/react-component-activity-share-files": "0.211.0",
+    "@webex/react-component-activity-system-message": "0.211.0",
+    "@webex/react-component-utils": "0.211.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "^17.0.2"

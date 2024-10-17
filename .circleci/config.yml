@@ -22,12 +22,6 @@ orbs:
 
 # Reusable commands for jobs
 commands:
-  install_graphicsmagick_and_libgcrypt:
-    description: "Install graphicsmagick and libgcrypt"
-    steps:
-      - run: |
-          sudo apt-get update
-          sudo apt-get install -y graphicsmagick libgcrypt-dev
   restore_workspace:
     steps:
       - attach_workspace:
@@ -54,7 +48,6 @@ jobs:
   install:
     executor: main-executor
     steps:
-      - install_graphicsmagick_and_libgcrypt
       - checkout
       - run:
           name: "Yarn cache clean"
@@ -84,10 +77,13 @@ jobs:
       - restore_node_modules
       - run:
           name: Run eslint
-          command: npm run eslint -- --format junit -o reports/junit/js-lint-results.xml
+          command: yarn run eslint -- --format junit -o reports/junit/js-lint-results.xml
+      - run:
+          name: Build for unit tests
+          command: yarn run build:all
       - run:
           name: Run all Jest test suites
-          command: npm run jest -- --ci -i --reporters="jest-junit"
+          command: yarn run test:unit
           environment:
             JEST_JUNIT_OUTPUT_NAME: js-jest-results.xml
             JEST_JUNIT_OUTPUT_DIR: reports/junit/jest
@@ -115,7 +111,7 @@ jobs:
       - restore_node_modules
       - run:
           name: Copy and build journey test static files
-          command: npm run build journey dist-test
+          command: yarn run build journey dist-test
       - persist_to_workspace:
           root: ~/react-widgets
           paths:
@@ -142,15 +138,15 @@ jobs:
           no_output_timeout: 30m
           command: |
             set -em
-            BROWSER=chrome npm run test:integration
+            BROWSER=chrome yarn run test:integration
       - store_test_results:
           path: reports/junit/wdio
       - store_artifacts:
           path: reports/junit/wdio
           destination: wdio
       - store_artifacts:
-          path: /home/circleci/.npm/_logs/
-          destination: npm-logs
+          path: /home/circleci/.yarn/_logs/
+          destination: yarn-logs
       - store_artifacts:
           path: reports/browser
           destination: browser
@@ -176,15 +172,15 @@ jobs:
           no_output_timeout: 30m
           command: |
             set -em
-            BROWSER=firefox npm run test:integration
+            BROWSER=firefox yarn run test:integration
       - store_test_results:
           path: reports/junit/wdio
       - store_artifacts:
           path: reports/junit/wdio
           destination: wdio
       - store_artifacts:
-          path: /home/circleci/.npm/_logs/
-          destination: npm-logs
+          path: /home/circleci/.yarn/_logs/
+          destination: yarn-logs
       - store_artifacts:
           path: reports/browser
           destination: browser
@@ -202,7 +198,7 @@ jobs:
       - run:
           name: "Generate Version Number"
           command: |
-            npm run release -- --release-as minor --no-verify
+            yarn run release -- --release-as minor --no-verify
             echo export VERSION_NUMBER=$(npx -c 'echo \"$npm_package_version\"') >> $BASH_ENV
             git rev-parse HEAD > gitcommit
       - run:
@@ -210,11 +206,11 @@ jobs:
           command: |
             export NODE_ENV=production
             export WEBEX_SCOPE="Identity:OAuthClient webexsquare:get_conversation webexsquare:admin spark:people_read spark:rooms_read spark:rooms_write spark:memberships_read spark:memberships_write spark:messages_read spark:messages_write spark:applications_read spark:applications_write spark:teams_read spark:teams_write spark:team_memberships_read spark:team_memberships_write spark:bots_read spark:bots_write spark:kms"
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${VERSION_NUMBER}/" npm run build:package widget-space
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${VERSION_NUMBER}/" npm run build sri widget-space
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-recents/archives/${VERSION_NUMBER}/" npm run build:package widget-recents
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-recents/archives/${VERSION_NUMBER}/" npm run build sri widget-recents
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-demo/archives/${VERSION_NUMBER}/" npm run build:package widget-demo
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-space build:src
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-space build:sri
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-recents/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-recents build:src
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-recents/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-recents build:sri
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-demo/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-demo build:src
       - run:
           name: "Push to upstream/master"
           command: git push upstream HEAD:master
@@ -223,14 +219,14 @@ jobs:
           command: git push --tags upstream
       - run:
           name: "Publish to NPM"
-          command: npm run publish:components
+          command: yarn run publish:components
       - persist_to_workspace:
           root: ~/react-widgets
           paths:
             - package.json
-            - packages/node_modules/@webex/widget-space/dist
-            - packages/node_modules/@webex/widget-recents/dist
-            - packages/node_modules/@webex/widget-demo/dist
+            - packages/@webex/widget-space/dist
+            - packages/@webex/widget-recents/dist
+            - packages/@webex/widget-demo/dist
 
   deploy_to_cdn:
     executor: main-executor
@@ -251,31 +247,31 @@ jobs:
           name: "Verify version number"
           command: echo ${VERSION_NUMBER}
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-space/dist
+          from: ~/react-widgets/packages/@webex/widget-space/dist
           to: s3://${AWS_BUCKET}/widget-space/alpha
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-space/dist
+          from: ~/react-widgets/packages/@webex/widget-space/dist
           to: s3://${AWS_BUCKET}/widget-space/latest
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-space/dist
+          from: ~/react-widgets/packages/@webex/widget-space/dist
           to: s3://${AWS_BUCKET}/widget-space/archives/${VERSION_NUMBER}
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-recents/dist
+          from: ~/react-widgets/packages/@webex/widget-recents/dist
           to: s3://${AWS_BUCKET}/widget-recents/alpha
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-recents/dist
+          from: ~/react-widgets/packages/@webex/widget-recents/dist
           to: s3://${AWS_BUCKET}/widget-recents/latest
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-recents/dist
+          from: ~/react-widgets/packages/@webex/widget-recents/dist
           to: s3://${AWS_BUCKET}/widget-recents/archives/${VERSION_NUMBER}
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-demo/dist
+          from: ~/react-widgets/packages/@webex/widget-demo/dist
           to: s3://${AWS_BUCKET}/widget-demo/alpha
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-demo/dist
+          from: ~/react-widgets/packages/@webex/widget-demo/dist
           to: s3://${AWS_BUCKET}/widget-demo/latest
       - aws-s3/sync:
-          from: ~/react-widgets/packages/node_modules/@webex/widget-demo/dist
+          from: ~/react-widgets/packages/@webex/widget-demo/dist
           to: s3://${AWS_BUCKET}/widget-demo/archives/${VERSION_NUMBER}
       - when:
           condition: ${AWS_DISTRIBUTION_ID}
@@ -348,12 +344,12 @@ jobs:
           git fetch --all --tags --prune
           git checkout tags/production
       - restore_node_modules
-      - run: npm i
+      - run: yarn install
       - run:
           name: "Generate Build Number"
           command: echo "export BUILD_NUMBER=CircleCI-React-Widgets-TAP_${CIRCLE_WORKFLOW_ID}" >> $BASH_ENV
       - run:
-          command: npm run test:tap
+          command: yarn run test:tap
           no_output_timeout: 30m
       - store_test_results:
           path: reports/
@@ -368,8 +364,8 @@ jobs:
           path: reports/cobertura.xml
           destination: cobertura.xml
       - store_artifacts:
-          path: /home/circleci/.npm/_logs/
-          destination: npm-logs
+          path: /home/circleci/.yarn/_logs/
+          destination: yarn-logs
       # - run:
       #     name: 'Create Incident on PagerDuty'
       #     when: on_fail

@@ -16,8 +16,8 @@
   ],
   "dependencies": {
     "@momentum-ui/react": "23.27.11",
-    "@webex/react-component-space-item": "workspace:*",
-    "@webex/react-component-utils": "workspace:*",
+    "@webex/react-component-space-item": "0.211.0",
+    "@webex/react-component-utils": "0.211.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "^17.0.2",

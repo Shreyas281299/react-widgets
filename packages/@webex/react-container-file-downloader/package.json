@@ -15,8 +15,8 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-utils": "workspace:*",
-    "@webex/redux-module-share": "workspace:*",
+    "@webex/react-component-utils": "0.211.0",
+    "@webex/redux-module-share": "0.211.0",
     "core-decorators": "^0.20.0",
     "file-saver": "^1.3.3",
     "prop-types": "^15.5.10",

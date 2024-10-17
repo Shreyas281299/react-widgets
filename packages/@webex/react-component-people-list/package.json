@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@momentum-ui/react": "23.27.11",
-    "@webex/react-container-presence-avatar": "workspace:*",
+    "@webex/react-container-presence-avatar": "0.211.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "^17.0.2",

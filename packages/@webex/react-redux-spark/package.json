@@ -28,7 +28,7 @@
     "@webex/plugin-meetings": "^2.59.6",
     "@webex/plugin-people": "^2.59.6",
     "@webex/plugin-rooms": "^2.59.6",
-    "@webex/redux-module-errors": "workspace:*",
+    "@webex/redux-module-errors": "0.211.0",
     "@webex/sdk-component-adapter": "^1.112.8",
     "@webex/storage-adapter-local-forage": "^2.59.6",
     "@webex/webex-core": "^2.59.6",

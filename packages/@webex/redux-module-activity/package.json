@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@webex/helper-html": "^2.59.6",
-    "@webex/react-component-utils": "workspace:*",
+    "@webex/react-component-utils": "0.211.0",
     "immutable": "^3.8.1",
     "marked": "^0.7.0"
   },

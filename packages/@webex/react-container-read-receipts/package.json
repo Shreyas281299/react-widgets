@@ -15,10 +15,10 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-badge": "workspace:*",
-    "@webex/react-component-typing-avatar": "workspace:*",
-    "@webex/redux-module-avatar": "workspace:*",
-    "@webex/redux-module-conversation": "workspace:*",
+    "@webex/react-component-badge": "0.211.0",
+    "@webex/react-component-typing-avatar": "0.211.0",
+    "@webex/redux-module-avatar": "0.211.0",
+    "@webex/redux-module-conversation": "0.211.0",
     "classnames": "^2.2.5",
     "lodash": "^4.17.15",
     "prop-types": "^15.5.10",

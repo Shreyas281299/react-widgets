@@ -15,7 +15,7 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-list-separator": "workspace:*",
+    "@webex/react-component-list-separator": "0.211.0",
     "prop-types": "^15.5.10",
     "react": "^17.0.2"
   },

@@ -15,9 +15,9 @@
     "es"
   ],
   "dependencies": {
-    "@webex/react-component-presence-avatar": "workspace:*",
-    "@webex/redux-module-avatar": "workspace:*",
-    "@webex/redux-module-presence": "workspace:*",
+    "@webex/react-component-presence-avatar": "0.211.0",
+    "@webex/redux-module-avatar": "0.211.0",
+    "@webex/redux-module-presence": "0.211.0",
     "moment": "^2.17.1",
     "prop-types": "^15.5.10",
     "react-redux": "^5.0.1",
