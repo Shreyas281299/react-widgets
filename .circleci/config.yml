@@ -6,7 +6,7 @@ executors:
   main-executor:
     working_directory: ~/react-widgets
     docker:
-      - image: cimg/node:20.13.1-browsers
+      - image: cimg/node:20.15.1-browsers
         # environment variables for all commands executed in the main-executor
         environment:
           AWS_BUCKET: code.s4d.io
@@ -17,6 +17,8 @@ orbs:
   aws-cli: circleci/aws-cli@3.1.4
   aws-s3: circleci/aws-s3@3.0.0
   jq: circleci/jq@1.9.0
+  browser-tools: circleci/browser-tools@1.4.2
+
 
 # Reusable commands for jobs
 commands:
@@ -25,12 +27,12 @@ commands:
       - attach_workspace:
           at: ~/react-widgets
   restore_node_modules:
-    description: "Restore the node_modules dependencies cache"
+    description: "Restore the Yarn dependencies cache"
     steps:
       - restore_cache:
           keys:
-            - node-modules-cache-node-iron-npm-10-{{ .Environment.CACHE_VERSION }}-{{ checksum "package-lock.json" }}
-            - node-modules-cache-node-iron-npm-10-{{ .Environment.CACHE_VERSION }}-
+            - node-modules-cache-node-iron-npm-6-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - node-modules-cache-node-iron-npm-6-{{ .Environment.CACHE_VERSION }}-
   aws-cloudfront-invalidation:
     parameters:
       cloudfront-id:
@@ -48,22 +50,24 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "npm cache clean"
-          command: npm cache clean --force
+          name: "Yarn cache clean"
+          command: yarn cache clean
       - run:
           name: "Install dependencies"
-          command: npm ci --force
-      # Cache node_modules across different internal jobs in the workflow and across different circleci runs
+          command: yarn
+      # Cache Yarn and workspace dependencies across different CircleCI runs
       - save_cache:
-          key: node-modules-cache-node-iron-npm-10-{{ .Environment.CACHE_VERSION }}-{{ checksum "package-lock.json" }}
+          key: node-modules-cache-node-iron-npm-6-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
           paths:
+            - .yarn/cache
             - node_modules
       - run:
-          name: Save NPM install log
-          command: npm ls --json > /tmp/npm_install.log || true
+          name: Save Yarn install log
+          command: yarn list --json > /tmp/yarn_install.log || true
       - store_artifacts:
-          path: /tmp/npm_install.log
-          destination: npm-install
+          path: /tmp/yarn_install.log
+          destination: yarn-install
+
 
   unit_tests_and_linting:
     executor: main-executor
@@ -73,10 +77,13 @@ jobs:
       - restore_node_modules
       - run:
           name: Run eslint
-          command: npm run eslint -- --format junit -o reports/junit/js-lint-results.xml
+          command: yarn run eslint --format junit -o reports/junit/js-lint-results.xml
+      - run:
+          name: Build for unit tests
+          command: yarn run build:all
       - run:
           name: Run all Jest test suites
-          command: npm run jest -- --ci -i --reporters="jest-junit"
+          command: yarn run test:unit
           environment:
             JEST_JUNIT_OUTPUT_NAME: js-jest-results.xml
             JEST_JUNIT_OUTPUT_DIR: reports/junit/jest
@@ -104,7 +111,7 @@ jobs:
       - restore_node_modules
       - run:
           name: Copy and build journey test static files
-          command: npm run build journey dist-test
+          command: yarn run build journey dist-test
       - persist_to_workspace:
           root: ~/react-widgets
           paths:
@@ -131,15 +138,15 @@ jobs:
           no_output_timeout: 30m
           command: |
             set -em
-            BROWSER=chrome npm run test:integration
+            BROWSER=chrome yarn run test:integration
       - store_test_results:
           path: reports/junit/wdio
       - store_artifacts:
           path: reports/junit/wdio
           destination: wdio
       - store_artifacts:
-          path: /home/circleci/.npm/_logs/
-          destination: npm-logs
+          path: /home/circleci/.yarn/_logs/
+          destination: yarn-logs
       - store_artifacts:
           path: reports/browser
           destination: browser
@@ -165,15 +172,15 @@ jobs:
           no_output_timeout: 30m
           command: |
             set -em
-            BROWSER=firefox npm run test:integration
+            BROWSER=firefox yarn run test:integration
       - store_test_results:
           path: reports/junit/wdio
       - store_artifacts:
           path: reports/junit/wdio
           destination: wdio
       - store_artifacts:
-          path: /home/circleci/.npm/_logs/
-          destination: npm-logs
+          path: /home/circleci/.yarn/_logs/
+          destination: yarn-logs
       - store_artifacts:
           path: reports/browser
           destination: browser
@@ -191,7 +198,7 @@ jobs:
       - run:
           name: "Generate Version Number"
           command: |
-            npm run release -- --release-as minor --no-verify
+            yarn run release -- --release-as minor --no-verify
             echo export VERSION_NUMBER=$(npx -c 'echo \"$npm_package_version\"') >> $BASH_ENV
             git rev-parse HEAD > gitcommit
       - run:
@@ -199,11 +206,11 @@ jobs:
           command: |
             export NODE_ENV=production
             export WEBEX_SCOPE="Identity:OAuthClient webexsquare:get_conversation webexsquare:admin spark:people_read spark:rooms_read spark:rooms_write spark:memberships_read spark:memberships_write spark:messages_read spark:messages_write spark:applications_read spark:applications_write spark:teams_read spark:teams_write spark:team_memberships_read spark:team_memberships_write spark:bots_read spark:bots_write spark:kms"
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${VERSION_NUMBER}/" npm run build:package widget-space
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${VERSION_NUMBER}/" npm run build sri widget-space
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-recents/archives/${VERSION_NUMBER}/" npm run build:package widget-recents
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-recents/archives/${VERSION_NUMBER}/" npm run build sri widget-recents
-            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-demo/archives/${VERSION_NUMBER}/" npm run build:package widget-demo
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-space build:src
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-space/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-space build:sri
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-recents/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-recents build:src
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-recents/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-recents build:sri
+            BUILD_PUBLIC_PATH="https://code.s4d.io/widget-demo/archives/${VERSION_NUMBER}/" yarn workspace @webex/widget-demo build:src
       - run:
           name: "Push to upstream/master"
           command: git push upstream HEAD:master
@@ -212,7 +219,7 @@ jobs:
           command: git push --tags upstream
       - run:
           name: "Publish to NPM"
-          command: npm run publish:components
+          command: yarn run publish:components
       - persist_to_workspace:
           root: ~/react-widgets
           paths:
@@ -337,12 +344,12 @@ jobs:
           git fetch --all --tags --prune
           git checkout tags/production
       - restore_node_modules
-      - run: npm i
+      - run: yarn install
       - run:
           name: "Generate Build Number"
           command: echo "export BUILD_NUMBER=CircleCI-React-Widgets-TAP_${CIRCLE_WORKFLOW_ID}" >> $BASH_ENV
       - run:
-          command: npm run test:tap
+          command: yarn run test:tap
           no_output_timeout: 30m
       - store_test_results:
           path: reports/
@@ -357,8 +364,8 @@ jobs:
           path: reports/cobertura.xml
           destination: cobertura.xml
       - store_artifacts:
-          path: /home/circleci/.npm/_logs/
-          destination: npm-logs
+          path: /home/circleci/.yarn/_logs/
+          destination: yarn-logs
       # - run:
       #     name: 'Create Incident on PagerDuty'
       #     when: on_fail

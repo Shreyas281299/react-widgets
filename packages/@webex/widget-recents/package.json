@@ -13,5 +13,50 @@
     "dist",
     "cjs",
     "es"
-  ]
+  ],
+  "scripts": {
+    "build": "babel-node ../../../scripts/build/index.js dist widget-recents",
+    "build:src": "cross-env NODE_ENV=${NODE_ENV:-production} NODE_OPTIONS=--max-old-space-size=2048 yarn run build",
+    "build:sri": "babel-node ../../../scripts/build/index.js sri widget-recents",
+    "serve": "yarn run serve:src package widget-recents",
+    "serve:src": "cross-env NODE_ENV=${NODE_ENV:-development} babel-node ../../../scripts/start/index.js",
+    "publish": "cross-env-shell NODE_ENV='' babel-node ../../../scripts/publish/index.js package widget-recents",
+    "test:unit": "cd ../../ && yarn run test:unit widget-recents"
+  },
+  "version": "0.211.0",
+  "dependencies": {
+    "@momentum-ui/react": "23.27.11",
+    "@webex/react-component-error-display": "0.211.0",
+    "@webex/react-component-loading-screen": "0.211.0",
+    "@webex/react-component-spaces-list": "0.211.0",
+    "@webex/react-component-utils": "0.211.0",
+    "@webex/react-container-presence-avatar": "0.211.0",
+    "@webex/redux-module-activities": "0.211.0",
+    "@webex/redux-module-avatar": "0.211.0",
+    "@webex/redux-module-errors": "0.211.0",
+    "@webex/redux-module-features": "0.211.0",
+    "@webex/redux-module-media": "0.211.0",
+    "@webex/redux-module-mercury": "0.211.0",
+    "@webex/redux-module-presence": "0.211.0",
+    "@webex/redux-module-spaces": "0.211.0",
+    "@webex/redux-module-teams": "0.211.0",
+    "@webex/redux-module-users": "0.211.0",
+    "@webex/webex-widget-base": "0.211.0",
+    "classnames": "^2.2.5",
+    "core-decorators": "^0.20.0",
+    "immutable": "^3.8.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.17.1",
+    "prop-types": "^15.5.10",
+    "react": "^17.0.2",
+    "react-intl": "^5.15.7",
+    "react-redux": "^5.0.1",
+    "recompose": "^0.26.0",
+    "redux": "^3.6.0",
+    "reselect": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.8.3",
+    "cross-env": "^5.0.0"
+  }
 }
