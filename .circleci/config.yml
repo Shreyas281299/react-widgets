@@ -17,11 +17,17 @@ orbs:
   aws-cli: circleci/aws-cli@3.1.4
   aws-s3: circleci/aws-s3@3.0.0
   jq: circleci/jq@1.9.0
-  node: circleci/node@6.2.0
+  browser-tools: circleci/browser-tools@1.4.2
 
 
 # Reusable commands for jobs
 commands:
+  install_graphicsmagick_and_libgcrypt:
+    description: "Install graphicsmagick and libgcrypt"
+    steps:
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y graphicsmagick libgcrypt-dev
   restore_workspace:
     steps:
       - attach_workspace:
@@ -31,8 +37,8 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-            - yarn-cache-node-20-{{ .Environment.CACHE_VERSION }}-
+            - node-modules-cache-node-iron-npm-6-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - node-modules-cache-node-iron-npm-6-{{ .Environment.CACHE_VERSION }}-
   aws-cloudfront-invalidation:
     parameters:
       cloudfront-id:
@@ -48,12 +54,7 @@ jobs:
   install:
     executor: main-executor
     steps:
-      - node/install:
-          install-pnpm: false 
-          node-version: '20.16.0' 
-      - run :
-          name: "Install yarn"
-          command: yarn set version berry
+      - install_graphicsmagick_and_libgcrypt
       - checkout
       - run:
           name: "Yarn cache clean"
