@@ -77,7 +77,7 @@ jobs:
       - restore_node_modules
       - run:
           name: Run eslint
-          command: yarn run eslint -- --format junit -o reports/junit/js-lint-results.xml
+          command: yarn run eslint --format junit -o reports/junit/js-lint-results.xml
       - run:
           name: Build for unit tests
           command: yarn run build:all
