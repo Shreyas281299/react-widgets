@@ -8315,7 +8315,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webex/private-react-component-example-code@workspace:*, @webex/private-react-component-example-code@workspace:packages/@webex/private-react-component-example-code":
+"@webex/private-react-component-example-code@npm:0.211.0, @webex/private-react-component-example-code@workspace:packages/@webex/private-react-component-example-code":
   version: 0.0.0-use.local
   resolution: "@webex/private-react-component-example-code@workspace:packages/@webex/private-react-component-example-code"
   dependencies:
@@ -8328,7 +8328,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/private-react-component-space-destination@workspace:*, @webex/private-react-component-space-destination@workspace:packages/@webex/private-react-component-space-destination":
+"@webex/private-react-component-space-destination@npm:0.211.0, @webex/private-react-component-space-destination@workspace:packages/@webex/private-react-component-space-destination":
   version: 0.0.0-use.local
   resolution: "@webex/private-react-component-space-destination@workspace:packages/@webex/private-react-component-space-destination"
   dependencies:
@@ -8340,7 +8340,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/private-react-component-token-input@workspace:*, @webex/private-react-component-token-input@workspace:packages/@webex/private-react-component-token-input":
+"@webex/private-react-component-token-input@npm:0.211.0, @webex/private-react-component-token-input@workspace:packages/@webex/private-react-component-token-input":
   version: 0.0.0-use.local
   resolution: "@webex/private-react-component-token-input@workspace:packages/@webex/private-react-component-token-input"
   dependencies:
@@ -8353,13 +8353,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-item-base@workspace:*, @webex/react-component-activity-item-base@workspace:packages/@webex/react-component-activity-item-base":
+"@webex/react-component-activity-item-base@npm:0.211.0, @webex/react-component-activity-item-base@workspace:packages/@webex/react-component-activity-item-base":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-item-base@workspace:packages/@webex/react-component-activity-item-base"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-container-presence-avatar": "workspace:*"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8367,15 +8367,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-item@workspace:*, @webex/react-component-activity-item@workspace:packages/@webex/react-component-activity-item":
+"@webex/react-component-activity-item@npm:0.211.0, @webex/react-component-activity-item@workspace:packages/@webex/react-component-activity-item":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-item@workspace:packages/@webex/react-component-activity-item"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-activity-post": "workspace:*"
-    "@webex/react-component-activity-share-files": "workspace:*"
-    "@webex/react-component-activity-system-message": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-activity-post": "npm:0.211.0"
+    "@webex/react-component-activity-share-files": "npm:0.211.0"
+    "@webex/react-component-activity-system-message": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8383,15 +8383,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-list@workspace:*, @webex/react-component-activity-list@workspace:packages/@webex/react-component-activity-list":
+"@webex/react-component-activity-list@npm:0.211.0, @webex/react-component-activity-list@workspace:packages/@webex/react-component-activity-list":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-list@workspace:packages/@webex/react-component-activity-list"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-activity-item": "workspace:*"
-    "@webex/react-component-day-separator": "workspace:*"
-    "@webex/react-component-new-messages-separator": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-activity-item": "npm:0.211.0"
+    "@webex/react-component-day-separator": "npm:0.211.0"
+    "@webex/react-component-new-messages-separator": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8399,7 +8399,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-menu-header@workspace:*, @webex/react-component-activity-menu-header@workspace:packages/@webex/react-component-activity-menu-header":
+"@webex/react-component-activity-menu-header@npm:0.211.0, @webex/react-component-activity-menu-header@workspace:packages/@webex/react-component-activity-menu-header":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-menu-header@workspace:packages/@webex/react-component-activity-menu-header"
   dependencies:
@@ -8412,13 +8412,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-menu@workspace:*, @webex/react-component-activity-menu@workspace:packages/@webex/react-component-activity-menu":
+"@webex/react-component-activity-menu@npm:0.211.0, @webex/react-component-activity-menu@workspace:packages/@webex/react-component-activity-menu":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-menu@workspace:packages/@webex/react-component-activity-menu"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-button-controls": "workspace:*"
+    "@webex/react-component-button-controls": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8431,7 +8431,7 @@ __metadata:
   resolution: "@webex/react-component-activity-post-action@workspace:packages/@webex/react-component-activity-post-action"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-button": "workspace:*"
+    "@webex/react-component-button": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8439,27 +8439,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-post@workspace:*, @webex/react-component-activity-post@workspace:packages/@webex/react-component-activity-post":
+"@webex/react-component-activity-post@npm:0.211.0, @webex/react-component-activity-post@workspace:packages/@webex/react-component-activity-post":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-post@workspace:packages/@webex/react-component-activity-post"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-activity-item-base": "workspace:*"
-    "@webex/react-component-activity-text": "workspace:*"
-    "@webex/react-component-adaptive-card": "workspace:*"
+    "@webex/react-component-activity-item-base": "npm:0.211.0"
+    "@webex/react-component-activity-text": "npm:0.211.0"
+    "@webex/react-component-adaptive-card": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
     react: "npm:^17.0.2"
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-share-file@workspace:*, @webex/react-component-activity-share-file@workspace:packages/@webex/react-component-activity-share-file":
+"@webex/react-component-activity-share-file@npm:0.211.0, @webex/react-component-activity-share-file@workspace:packages/@webex/react-component-activity-share-file":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-share-file@workspace:packages/@webex/react-component-activity-share-file"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8467,17 +8467,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-share-files@workspace:*, @webex/react-component-activity-share-files@workspace:packages/@webex/react-component-activity-share-files":
+"@webex/react-component-activity-share-files@npm:0.211.0, @webex/react-component-activity-share-files@workspace:packages/@webex/react-component-activity-share-files":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-share-files@workspace:packages/@webex/react-component-activity-share-files"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-activity-item-base": "workspace:*"
-    "@webex/react-component-activity-text": "workspace:*"
-    "@webex/react-component-adaptive-card": "workspace:*"
-    "@webex/react-component-file-share-display": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/react-container-file-downloader": "workspace:*"
+    "@webex/react-component-activity-item-base": "npm:0.211.0"
+    "@webex/react-component-activity-text": "npm:0.211.0"
+    "@webex/react-component-adaptive-card": "npm:0.211.0"
+    "@webex/react-component-file-share-display": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/react-container-file-downloader": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8485,14 +8485,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-share-thumbnail@workspace:*, @webex/react-component-activity-share-thumbnail@workspace:packages/@webex/react-component-activity-share-thumbnail":
+"@webex/react-component-activity-share-thumbnail@npm:0.211.0, @webex/react-component-activity-share-thumbnail@workspace:packages/@webex/react-component-activity-share-thumbnail":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-share-thumbnail@workspace:packages/@webex/react-component-activity-share-thumbnail"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-activity-share-file": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-activity-share-file": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8500,12 +8500,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-system-message@workspace:*, @webex/react-component-activity-system-message@workspace:packages/@webex/react-component-activity-system-message":
+"@webex/react-component-activity-system-message@npm:0.211.0, @webex/react-component-activity-system-message@workspace:packages/@webex/react-component-activity-system-message":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-system-message@workspace:packages/@webex/react-component-activity-system-message"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-call-data-activity": "workspace:*"
+    "@webex/react-component-call-data-activity": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8514,7 +8514,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-activity-text@workspace:*, @webex/react-component-activity-text@workspace:packages/@webex/react-component-activity-text":
+"@webex/react-component-activity-text@npm:0.211.0, @webex/react-component-activity-text@workspace:packages/@webex/react-component-activity-text":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-activity-text@workspace:packages/@webex/react-component-activity-text"
   dependencies:
@@ -8526,13 +8526,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-adaptive-card@workspace:*, @webex/react-component-adaptive-card@workspace:packages/@webex/react-component-adaptive-card":
+"@webex/react-component-adaptive-card@npm:0.211.0, @webex/react-component-adaptive-card@workspace:packages/@webex/react-component-adaptive-card":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-adaptive-card@workspace:packages/@webex/react-component-adaptive-card"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8549,7 +8549,7 @@ __metadata:
   resolution: "@webex/react-component-add-file-button@workspace:packages/@webex/react-component-add-file-button"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-icon": "workspace:*"
+    "@webex/react-component-icon": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8574,7 +8574,7 @@ __metadata:
   resolution: "@webex/react-component-avatar@workspace:packages/@webex/react-component-avatar"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-icon": "workspace:*"
+    "@webex/react-component-icon": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8582,7 +8582,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-badge@workspace:*, @webex/react-component-badge@workspace:packages/@webex/react-component-badge":
+"@webex/react-component-badge@npm:0.211.0, @webex/react-component-badge@workspace:packages/@webex/react-component-badge":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-badge@workspace:packages/@webex/react-component-badge"
   dependencies:
@@ -8594,7 +8594,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-button-controls@workspace:*, @webex/react-component-button-controls@workspace:packages/@webex/react-component-button-controls":
+"@webex/react-component-button-controls@npm:0.211.0, @webex/react-component-button-controls@workspace:packages/@webex/react-component-button-controls":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-button-controls@workspace:packages/@webex/react-component-button-controls"
   dependencies:
@@ -8607,12 +8607,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-button@workspace:*, @webex/react-component-button@workspace:packages/@webex/react-component-button":
+"@webex/react-component-button@npm:0.211.0, @webex/react-component-button@workspace:packages/@webex/react-component-button":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-button@workspace:packages/@webex/react-component-button"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-icon": "workspace:*"
+    "@webex/react-component-icon": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8620,7 +8620,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-call-data-activity@workspace:*, @webex/react-component-call-data-activity@workspace:packages/@webex/react-component-call-data-activity":
+"@webex/react-component-call-data-activity@npm:0.211.0, @webex/react-component-call-data-activity@workspace:packages/@webex/react-component-call-data-activity":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-call-data-activity@workspace:packages/@webex/react-component-call-data-activity"
   dependencies:
@@ -8633,7 +8633,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-chip-base@workspace:*, @webex/react-component-chip-base@workspace:packages/@webex/react-component-chip-base":
+"@webex/react-component-chip-base@npm:0.211.0, @webex/react-component-chip-base@workspace:packages/@webex/react-component-chip-base":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-chip-base@workspace:packages/@webex/react-component-chip-base"
   dependencies:
@@ -8646,13 +8646,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-chip-file@workspace:*, @webex/react-component-chip-file@workspace:packages/@webex/react-component-chip-file":
+"@webex/react-component-chip-file@npm:0.211.0, @webex/react-component-chip-file@workspace:packages/@webex/react-component-chip-file":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-chip-file@workspace:packages/@webex/react-component-chip-file"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-chip-base": "workspace:*"
+    "@webex/react-component-chip-base": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8660,7 +8660,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-confirmation-modal@workspace:*, @webex/react-component-confirmation-modal@workspace:packages/@webex/react-component-confirmation-modal":
+"@webex/react-component-confirmation-modal@npm:0.211.0, @webex/react-component-confirmation-modal@workspace:packages/@webex/react-component-confirmation-modal":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-confirmation-modal@workspace:packages/@webex/react-component-confirmation-modal"
   dependencies:
@@ -8672,7 +8672,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-cover@workspace:*, @webex/react-component-cover@workspace:packages/@webex/react-component-cover":
+"@webex/react-component-cover@npm:0.211.0, @webex/react-component-cover@workspace:packages/@webex/react-component-cover":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-cover@workspace:packages/@webex/react-component-cover"
   dependencies:
@@ -8684,12 +8684,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-day-separator@workspace:*, @webex/react-component-day-separator@workspace:packages/@webex/react-component-day-separator":
+"@webex/react-component-day-separator@npm:0.211.0, @webex/react-component-day-separator@workspace:packages/@webex/react-component-day-separator":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-day-separator@workspace:packages/@webex/react-component-day-separator"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-list-separator": "workspace:*"
+    "@webex/react-component-list-separator": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     moment: "npm:^2.17.1"
     prop-types: "npm:^15.5.10"
@@ -8698,7 +8698,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-error-display@workspace:*, @webex/react-component-error-display@workspace:packages/@webex/react-component-error-display":
+"@webex/react-component-error-display@npm:0.211.0, @webex/react-component-error-display@workspace:packages/@webex/react-component-error-display":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-error-display@workspace:packages/@webex/react-component-error-display"
   dependencies:
@@ -8710,25 +8710,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-file-share-display@workspace:*, @webex/react-component-file-share-display@workspace:packages/@webex/react-component-file-share-display":
+"@webex/react-component-file-share-display@npm:0.211.0, @webex/react-component-file-share-display@workspace:packages/@webex/react-component-file-share-display":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-file-share-display@workspace:packages/@webex/react-component-file-share-display"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-activity-share-thumbnail": "workspace:*"
+    "@webex/react-component-activity-share-thumbnail": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
     react: "npm:^17.0.2"
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-file-staging-area@workspace:*, @webex/react-component-file-staging-area@workspace:packages/@webex/react-component-file-staging-area":
+"@webex/react-component-file-staging-area@npm:0.211.0, @webex/react-component-file-staging-area@workspace:packages/@webex/react-component-file-staging-area":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-file-staging-area@workspace:packages/@webex/react-component-file-staging-area"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-chip-file": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-chip-file": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8736,7 +8736,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-icon@workspace:*, @webex/react-component-icon@workspace:packages/@webex/react-component-icon":
+"@webex/react-component-icon@npm:0.211.0, @webex/react-component-icon@workspace:packages/@webex/react-component-icon":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-icon@workspace:packages/@webex/react-component-icon"
   dependencies:
@@ -8748,13 +8748,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-incoming-call@workspace:*, @webex/react-component-incoming-call@workspace:packages/@webex/react-component-incoming-call":
+"@webex/react-component-incoming-call@npm:0.211.0, @webex/react-component-incoming-call@workspace:packages/@webex/react-component-incoming-call":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-incoming-call@workspace:packages/@webex/react-component-incoming-call"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-button-controls": "workspace:*"
-    "@webex/react-container-presence-avatar": "workspace:*"
+    "@webex/react-component-button-controls": "npm:0.211.0"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8767,8 +8767,8 @@ __metadata:
   resolution: "@webex/react-component-join-call-button@workspace:packages/@webex/react-component-join-call-button"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-button": "workspace:*"
-    "@webex/react-component-timer": "workspace:*"
+    "@webex/react-component-button": "npm:0.211.0"
+    "@webex/react-component-timer": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8776,7 +8776,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-list-separator@workspace:*, @webex/react-component-list-separator@workspace:packages/@webex/react-component-list-separator":
+"@webex/react-component-list-separator@npm:0.211.0, @webex/react-component-list-separator@workspace:packages/@webex/react-component-list-separator":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-list-separator@workspace:packages/@webex/react-component-list-separator"
   dependencies:
@@ -8788,7 +8788,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-loading-screen@workspace:*, @webex/react-component-loading-screen@workspace:packages/@webex/react-component-loading-screen":
+"@webex/react-component-loading-screen@npm:0.211.0, @webex/react-component-loading-screen@workspace:packages/@webex/react-component-loading-screen":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-loading-screen@workspace:packages/@webex/react-component-loading-screen"
   dependencies:
@@ -8802,13 +8802,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-md-choiceset-input@workspace:*, @webex/react-component-md-choiceset-input@workspace:packages/@webex/react-component-md-choiceset-input":
+"@webex/react-component-md-choiceset-input@npm:0.211.0, @webex/react-component-md-choiceset-input@workspace:packages/@webex/react-component-md-choiceset-input":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-md-choiceset-input@workspace:packages/@webex/react-component-md-choiceset-input"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     adaptivecards: "npm:^2.0.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
@@ -8817,13 +8817,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-md-text-input@workspace:*, @webex/react-component-md-text-input@workspace:packages/@webex/react-component-md-text-input":
+"@webex/react-component-md-text-input@npm:0.211.0, @webex/react-component-md-text-input@workspace:packages/@webex/react-component-md-text-input":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-md-text-input@workspace:packages/@webex/react-component-md-text-input"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     adaptivecards: "npm:^2.0.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
@@ -8831,13 +8831,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-md-toggle-input@workspace:*, @webex/react-component-md-toggle-input@workspace:packages/@webex/react-component-md-toggle-input":
+"@webex/react-component-md-toggle-input@npm:0.211.0, @webex/react-component-md-toggle-input@workspace:packages/@webex/react-component-md-toggle-input":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-md-toggle-input@workspace:packages/@webex/react-component-md-toggle-input"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     adaptivecards: "npm:^2.0.0"
     cross-env: "npm:^5.0.0"
     react: "npm:^17.0.2"
@@ -8845,25 +8845,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-new-messages-separator@workspace:*, @webex/react-component-new-messages-separator@workspace:packages/@webex/react-component-new-messages-separator":
+"@webex/react-component-new-messages-separator@npm:0.211.0, @webex/react-component-new-messages-separator@workspace:packages/@webex/react-component-new-messages-separator":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-new-messages-separator@workspace:packages/@webex/react-component-new-messages-separator"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-list-separator": "workspace:*"
+    "@webex/react-component-list-separator": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
     react: "npm:^17.0.2"
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-people-list@workspace:*, @webex/react-component-people-list@workspace:packages/@webex/react-component-people-list":
+"@webex/react-component-people-list@npm:0.211.0, @webex/react-component-people-list@workspace:packages/@webex/react-component-people-list":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-people-list@workspace:packages/@webex/react-component-people-list"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-container-presence-avatar": "workspace:*"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8872,20 +8872,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-presence-avatar@workspace:*, @webex/react-component-presence-avatar@workspace:packages/@webex/react-component-presence-avatar":
+"@webex/react-component-presence-avatar@npm:0.211.0, @webex/react-component-presence-avatar@workspace:packages/@webex/react-component-presence-avatar":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-presence-avatar@workspace:packages/@webex/react-component-presence-avatar"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/redux-module-presence": "workspace:*"
+    "@webex/redux-module-presence": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
     react: "npm:^17.0.2"
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-ringtone@workspace:*, @webex/react-component-ringtone@workspace:packages/@webex/react-component-ringtone":
+"@webex/react-component-ringtone@npm:0.211.0, @webex/react-component-ringtone@workspace:packages/@webex/react-component-ringtone":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-ringtone@workspace:packages/@webex/react-component-ringtone"
   dependencies:
@@ -8902,8 +8902,8 @@ __metadata:
   resolution: "@webex/react-component-scroll-to-bottom-button@workspace:packages/@webex/react-component-scroll-to-bottom-button"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-button": "workspace:*"
-    "@webex/react-component-icon": "workspace:*"
+    "@webex/react-component-button": "npm:0.211.0"
+    "@webex/react-component-icon": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8911,28 +8911,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-space-item@workspace:*, @webex/react-component-space-item@workspace:packages/@webex/react-component-space-item":
+"@webex/react-component-space-item@npm:0.211.0, @webex/react-component-space-item@workspace:packages/@webex/react-component-space-item":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-space-item@workspace:packages/@webex/react-component-space-item"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-timer": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-timer": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
     react: "npm:^17.0.2"
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-spaces-list@workspace:*, @webex/react-component-spaces-list@workspace:packages/@webex/react-component-spaces-list":
+"@webex/react-component-spaces-list@npm:0.211.0, @webex/react-component-spaces-list@workspace:packages/@webex/react-component-spaces-list":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-spaces-list@workspace:packages/@webex/react-component-spaces-list"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-space-item": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-space-item": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -8941,7 +8941,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-spark-fonts@workspace:*, @webex/react-component-spark-fonts@workspace:packages/@webex/react-component-spark-fonts":
+"@webex/react-component-spark-fonts@npm:0.211.0, @webex/react-component-spark-fonts@workspace:packages/@webex/react-component-spark-fonts":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-spark-fonts@workspace:packages/@webex/react-component-spark-fonts"
   dependencies:
@@ -8999,7 +8999,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-timer@workspace:*, @webex/react-component-timer@workspace:packages/@webex/react-component-timer":
+"@webex/react-component-timer@npm:0.211.0, @webex/react-component-timer@workspace:packages/@webex/react-component-timer":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-timer@workspace:packages/@webex/react-component-timer"
   dependencies:
@@ -9012,12 +9012,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-title-bar@workspace:*, @webex/react-component-title-bar@workspace:packages/@webex/react-component-title-bar":
+"@webex/react-component-title-bar@npm:0.211.0, @webex/react-component-title-bar@workspace:packages/@webex/react-component-title-bar":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-title-bar@workspace:packages/@webex/react-component-title-bar"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-container-presence-avatar": "workspace:*"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -9025,12 +9025,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-typing-avatar@workspace:*, @webex/react-component-typing-avatar@workspace:packages/@webex/react-component-typing-avatar":
+"@webex/react-component-typing-avatar@npm:0.211.0, @webex/react-component-typing-avatar@workspace:packages/@webex/react-component-typing-avatar":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-typing-avatar@workspace:packages/@webex/react-component-typing-avatar"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-container-presence-avatar": "workspace:*"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -9049,17 +9049,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-utils@workspace:*, @webex/react-component-utils@workspace:packages/@webex/react-component-utils":
+"@webex/react-component-utils@npm:0.211.0, @webex/react-component-utils@workspace:packages/@webex/react-component-utils":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-utils@workspace:packages/@webex/react-component-utils"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@webex/common": "npm:^2.59.6"
     "@webex/helper-html": "npm:^2.59.6"
-    "@webex/react-component-md-choiceset-input": "workspace:*"
-    "@webex/react-component-md-text-input": "workspace:*"
-    "@webex/react-component-md-toggle-input": "workspace:*"
-    "@webex/redux-module-activity": "workspace:*"
+    "@webex/react-component-md-choiceset-input": "npm:0.211.0"
+    "@webex/react-component-md-text-input": "npm:0.211.0"
+    "@webex/react-component-md-toggle-input": "npm:0.211.0"
+    "@webex/redux-module-activity": "npm:0.211.0"
     adaptivecards: "npm:^2.0.0"
     cross-env: "npm:^5.0.0"
     moment: "npm:^2.17.1"
@@ -9069,7 +9069,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-component-video@workspace:*, @webex/react-component-video@workspace:packages/@webex/react-component-video":
+"@webex/react-component-video@npm:0.211.0, @webex/react-component-video@workspace:packages/@webex/react-component-video":
   version: 0.0.0-use.local
   resolution: "@webex/react-component-video@workspace:packages/@webex/react-component-video"
   dependencies:
@@ -9081,15 +9081,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-container-activity-list@workspace:*, @webex/react-container-activity-list@workspace:packages/@webex/react-container-activity-list":
+"@webex/react-container-activity-list@npm:0.211.0, @webex/react-container-activity-list@workspace:packages/@webex/react-container-activity-list":
   version: 0.0.0-use.local
   resolution: "@webex/react-container-activity-list@workspace:packages/@webex/react-container-activity-list"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@webex/helper-html": "npm:^2.59.6"
-    "@webex/react-component-activity-list": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
+    "@webex/react-component-activity-list": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     linkifyjs: "npm:^2.1.4"
@@ -9101,13 +9101,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-container-file-downloader@workspace:*, @webex/react-container-file-downloader@workspace:packages/@webex/react-container-file-downloader":
+"@webex/react-container-file-downloader@npm:0.211.0, @webex/react-container-file-downloader@workspace:packages/@webex/react-container-file-downloader":
   version: 0.0.0-use.local
   resolution: "@webex/react-container-file-downloader@workspace:packages/@webex/react-container-file-downloader"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/redux-module-share": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/redux-module-share": "npm:0.211.0"
     core-decorators: "npm:^0.20.0"
     cross-env: "npm:^5.0.0"
     file-saver: "npm:^1.3.3"
@@ -9119,18 +9119,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-container-message-composer@workspace:*, @webex/react-container-message-composer@workspace:packages/@webex/react-container-message-composer":
+"@webex/react-container-message-composer@npm:0.211.0, @webex/react-container-message-composer@workspace:packages/@webex/react-container-message-composer":
   version: 0.0.0-use.local
   resolution: "@webex/react-container-message-composer@workspace:packages/@webex/react-container-message-composer"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-file-staging-area": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/react-container-presence-avatar": "workspace:*"
-    "@webex/redux-module-activity": "workspace:*"
-    "@webex/redux-module-errors": "workspace:*"
-    "@webex/redux-module-search": "workspace:*"
+    "@webex/react-component-file-staging-area": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
+    "@webex/redux-module-activity": "npm:0.211.0"
+    "@webex/redux-module-errors": "npm:0.211.0"
+    "@webex/redux-module-search": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     core-decorators: "npm:^0.20.0"
     cross-env: "npm:^5.0.0"
@@ -9145,7 +9145,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-container-notifications@workspace:*, @webex/react-container-notifications@workspace:packages/@webex/react-container-notifications":
+"@webex/react-container-notifications@npm:0.211.0, @webex/react-container-notifications@workspace:packages/@webex/react-container-notifications":
   version: 0.0.0-use.local
   resolution: "@webex/react-container-notifications@workspace:packages/@webex/react-container-notifications"
   dependencies:
@@ -9161,14 +9161,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-container-presence-avatar@workspace:*, @webex/react-container-presence-avatar@workspace:packages/@webex/react-container-presence-avatar":
+"@webex/react-container-presence-avatar@npm:0.211.0, @webex/react-container-presence-avatar@workspace:packages/@webex/react-container-presence-avatar":
   version: 0.0.0-use.local
   resolution: "@webex/react-container-presence-avatar@workspace:packages/@webex/react-container-presence-avatar"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-presence-avatar": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-presence": "workspace:*"
+    "@webex/react-component-presence-avatar": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-presence": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     moment: "npm:^2.17.1"
     prop-types: "npm:^15.5.10"
@@ -9178,15 +9178,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-container-read-receipts@workspace:*, @webex/react-container-read-receipts@workspace:packages/@webex/react-container-read-receipts":
+"@webex/react-container-read-receipts@npm:0.211.0, @webex/react-container-read-receipts@workspace:packages/@webex/react-container-read-receipts":
   version: 0.0.0-use.local
   resolution: "@webex/react-container-read-receipts@workspace:packages/@webex/react-container-read-receipts"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-badge": "workspace:*"
-    "@webex/react-component-typing-avatar": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
+    "@webex/react-component-badge": "npm:0.211.0"
+    "@webex/react-component-typing-avatar": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     lodash: "npm:^4.17.15"
@@ -9198,13 +9198,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-container-scrolling-activity@workspace:*, @webex/react-container-scrolling-activity@workspace:packages/@webex/react-container-scrolling-activity":
+"@webex/react-container-scrolling-activity@npm:0.211.0, @webex/react-container-scrolling-activity@workspace:packages/@webex/react-container-scrolling-activity":
   version: 0.0.0-use.local
   resolution: "@webex/react-container-scrolling-activity@workspace:packages/@webex/react-container-scrolling-activity"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-hoc-scrollable": "workspace:*"
+    "@webex/react-hoc-scrollable": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -9212,13 +9212,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-hoc-conversation-mercury@workspace:*, @webex/react-hoc-conversation-mercury@workspace:packages/@webex/react-hoc-conversation-mercury":
+"@webex/react-hoc-conversation-mercury@npm:0.211.0, @webex/react-hoc-conversation-mercury@workspace:packages/@webex/react-hoc-conversation-mercury":
   version: 0.0.0-use.local
   resolution: "@webex/react-hoc-conversation-mercury@workspace:packages/@webex/react-hoc-conversation-mercury"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
     react: "npm:^17.0.2"
@@ -9227,12 +9227,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-hoc-scrollable@workspace:*, @webex/react-hoc-scrollable@workspace:packages/@webex/react-hoc-scrollable":
+"@webex/react-hoc-scrollable@npm:0.211.0, @webex/react-hoc-scrollable@workspace:packages/@webex/react-hoc-scrollable":
   version: 0.0.0-use.local
   resolution: "@webex/react-hoc-scrollable@workspace:packages/@webex/react-hoc-scrollable"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     core-decorators: "npm:^0.20.0"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -9265,7 +9265,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/react-redux-spark@workspace:*, @webex/react-redux-spark@workspace:packages/@webex/react-redux-spark":
+"@webex/react-redux-spark@npm:0.211.0, @webex/react-redux-spark@workspace:packages/@webex/react-redux-spark":
   version: 0.0.0-use.local
   resolution: "@webex/react-redux-spark@workspace:packages/@webex/react-redux-spark"
   dependencies:
@@ -9283,7 +9283,7 @@ __metadata:
     "@webex/plugin-meetings": "npm:^2.59.6"
     "@webex/plugin-people": "npm:^2.59.6"
     "@webex/plugin-rooms": "npm:^2.59.6"
-    "@webex/redux-module-errors": "workspace:*"
+    "@webex/redux-module-errors": "npm:0.211.0"
     "@webex/sdk-component-adapter": "npm:^1.112.8"
     "@webex/storage-adapter-local-forage": "npm:^2.59.6"
     "@webex/webex-core": "npm:^2.59.6"
@@ -9513,7 +9513,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-activities@workspace:*, @webex/redux-module-activities@workspace:packages/@webex/redux-module-activities":
+"@webex/redux-module-activities@npm:0.211.0, @webex/redux-module-activities@workspace:packages/@webex/redux-module-activities":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-activities@workspace:packages/@webex/redux-module-activities"
   dependencies:
@@ -9523,36 +9523,36 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-activity@workspace:*, @webex/redux-module-activity@workspace:packages/@webex/redux-module-activity":
+"@webex/redux-module-activity@npm:0.211.0, @webex/redux-module-activity@workspace:packages/@webex/redux-module-activity":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-activity@workspace:packages/@webex/redux-module-activity"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@webex/helper-html": "npm:^2.59.6"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
     marked: "npm:^0.7.0"
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-avatar@workspace:*, @webex/redux-module-avatar@workspace:packages/@webex/redux-module-avatar":
+"@webex/redux-module-avatar@npm:0.211.0, @webex/redux-module-avatar@workspace:packages/@webex/redux-module-avatar":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-avatar@workspace:packages/@webex/redux-module-avatar"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-conversation@workspace:*, @webex/redux-module-conversation@workspace:packages/@webex/redux-module-conversation":
+"@webex/redux-module-conversation@npm:0.211.0, @webex/redux-module-conversation@workspace:packages/@webex/redux-module-conversation":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-conversation@workspace:packages/@webex/redux-module-conversation"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
     lodash: "npm:^4.17.15"
@@ -9560,7 +9560,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-errors@workspace:*, @webex/redux-module-errors@workspace:packages/@webex/redux-module-errors":
+"@webex/redux-module-errors@npm:0.211.0, @webex/redux-module-errors@workspace:packages/@webex/redux-module-errors":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-errors@workspace:packages/@webex/redux-module-errors"
   dependencies:
@@ -9570,7 +9570,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-features@workspace:*, @webex/redux-module-features@workspace:packages/@webex/redux-module-features":
+"@webex/redux-module-features@npm:0.211.0, @webex/redux-module-features@workspace:packages/@webex/redux-module-features":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-features@workspace:packages/@webex/redux-module-features"
   dependencies:
@@ -9580,7 +9580,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-flags@workspace:*, @webex/redux-module-flags@workspace:packages/@webex/redux-module-flags":
+"@webex/redux-module-flags@npm:0.211.0, @webex/redux-module-flags@workspace:packages/@webex/redux-module-flags":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-flags@workspace:packages/@webex/redux-module-flags"
   dependencies:
@@ -9590,7 +9590,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-indicators@workspace:*, @webex/redux-module-indicators@workspace:packages/@webex/redux-module-indicators":
+"@webex/redux-module-indicators@npm:0.211.0, @webex/redux-module-indicators@workspace:packages/@webex/redux-module-indicators":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-indicators@workspace:packages/@webex/redux-module-indicators"
   dependencies:
@@ -9600,12 +9600,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-media@workspace:*, @webex/redux-module-media@workspace:packages/@webex/redux-module-media":
+"@webex/redux-module-media@npm:0.211.0, @webex/redux-module-media@workspace:packages/@webex/redux-module-media":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-media@workspace:packages/@webex/redux-module-media"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
     react-redux: "npm:^5.0.1"
@@ -9615,7 +9615,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-meetings@workspace:*, @webex/redux-module-meetings@workspace:packages/@webex/redux-module-meetings":
+"@webex/redux-module-meetings@npm:0.211.0, @webex/redux-module-meetings@workspace:packages/@webex/redux-module-meetings":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-meetings@workspace:packages/@webex/redux-module-meetings"
   dependencies:
@@ -9625,12 +9625,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-mercury@workspace:*, @webex/redux-module-mercury@workspace:packages/@webex/redux-module-mercury":
+"@webex/redux-module-mercury@npm:0.211.0, @webex/redux-module-mercury@workspace:packages/@webex/redux-module-mercury":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-mercury@workspace:packages/@webex/redux-module-mercury"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
     react-redux: "npm:^5.0.1"
@@ -9639,7 +9639,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-presence@workspace:*, @webex/redux-module-presence@workspace:packages/@webex/redux-module-presence":
+"@webex/redux-module-presence@npm:0.211.0, @webex/redux-module-presence@workspace:packages/@webex/redux-module-presence":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-presence@workspace:packages/@webex/redux-module-presence"
   dependencies:
@@ -9649,46 +9649,46 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-search@workspace:*, @webex/redux-module-search@workspace:packages/@webex/redux-module-search":
+"@webex/redux-module-search@npm:0.211.0, @webex/redux-module-search@workspace:packages/@webex/redux-module-search":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-search@workspace:packages/@webex/redux-module-search"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
     validator: "npm:^9.0.0"
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-share@workspace:*, @webex/redux-module-share@workspace:packages/@webex/redux-module-share":
+"@webex/redux-module-share@npm:0.211.0, @webex/redux-module-share@workspace:packages/@webex/redux-module-share":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-share@workspace:packages/@webex/redux-module-share"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-spaces@workspace:*, @webex/redux-module-spaces@workspace:packages/@webex/redux-module-spaces":
+"@webex/redux-module-spaces@npm:0.211.0, @webex/redux-module-spaces@workspace:packages/@webex/redux-module-spaces":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-spaces@workspace:packages/@webex/redux-module-spaces"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/redux-module-activities": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
-    "@webex/redux-module-errors": "workspace:*"
-    "@webex/redux-module-users": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/redux-module-activities": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
+    "@webex/redux-module-errors": "npm:0.211.0"
+    "@webex/redux-module-users": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
     lodash: "npm:^4.17.15"
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-teams@workspace:*, @webex/redux-module-teams@workspace:packages/@webex/redux-module-teams":
+"@webex/redux-module-teams@npm:0.211.0, @webex/redux-module-teams@workspace:packages/@webex/redux-module-teams":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-teams@workspace:packages/@webex/redux-module-teams"
   dependencies:
@@ -9698,14 +9698,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/redux-module-users@workspace:*, @webex/redux-module-users@workspace:packages/@webex/redux-module-users":
+"@webex/redux-module-users@npm:0.211.0, @webex/redux-module-users@workspace:packages/@webex/redux-module-users":
   version: 0.0.0-use.local
   resolution: "@webex/redux-module-users@workspace:packages/@webex/redux-module-users"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-presence": "workspace:*"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-presence": "npm:0.211.0"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
   languageName: unknown
@@ -10004,17 +10004,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/webex-widget-base@workspace:*, @webex/webex-widget-base@workspace:packages/@webex/webex-widget-base":
+"@webex/webex-widget-base@npm:0.211.0, @webex/webex-widget-base@workspace:packages/@webex/webex-widget-base":
   version: 0.0.0-use.local
   resolution: "@webex/webex-widget-base@workspace:packages/@webex/webex-widget-base"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@formatjs/intl-pluralrules": "npm:^1.5.4"
     "@formatjs/intl-relativetimeformat": "npm:^4.5.11"
-    "@webex/react-component-spark-fonts": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/react-redux-spark": "workspace:*"
-    "@webex/redux-module-users": "workspace:*"
+    "@webex/react-component-spark-fonts": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/react-redux-spark": "npm:0.211.0"
+    "@webex/redux-module-users": "npm:0.211.0"
     ampersand-events: "npm:^2.0.2"
     cross-env: "npm:^5.0.0"
     lodash: "npm:^4.17.15"
@@ -10064,13 +10064,13 @@ __metadata:
     "@webex/plugin-meetings": "npm:^2.59.6"
     "@webex/plugin-people": "npm:^2.59.6"
     "@webex/plugin-rooms": "npm:^2.59.6"
-    "@webex/private-react-component-example-code": "workspace:*"
-    "@webex/private-react-component-space-destination": "workspace:*"
-    "@webex/private-react-component-token-input": "workspace:*"
+    "@webex/private-react-component-example-code": "npm:0.211.0"
+    "@webex/private-react-component-space-destination": "npm:0.211.0"
+    "@webex/private-react-component-token-input": "npm:0.211.0"
     "@webex/storage-adapter-local-forage": "npm:^2.59.6"
     "@webex/webex-core": "npm:^2.59.6"
-    "@webex/widget-recents": "workspace:*"
-    "@webex/widget-space": "workspace:*"
+    "@webex/widget-recents": "npm:0.211.0"
+    "@webex/widget-space": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     core-decorators: "npm:^0.20.0"
     cross-env: "npm:^5.0.0"
@@ -10082,17 +10082,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/widget-files@workspace:*, @webex/widget-files@workspace:packages/@webex/widget-files":
+"@webex/widget-files@npm:0.211.0, @webex/widget-files@workspace:packages/@webex/widget-files":
   version: 0.0.0-use.local
   resolution: "@webex/widget-files@workspace:packages/@webex/widget-files"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-activity-menu-header": "workspace:*"
-    "@webex/react-component-file-share-display": "workspace:*"
-    "@webex/react-container-file-downloader": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
-    "@webex/redux-module-share": "workspace:*"
-    "@webex/webex-widget-base": "workspace:*"
+    "@webex/react-component-activity-menu-header": "npm:0.211.0"
+    "@webex/react-component-file-share-display": "npm:0.211.0"
+    "@webex/react-container-file-downloader": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
+    "@webex/redux-module-share": "npm:0.211.0"
+    "@webex/webex-widget-base": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     core-decorators: "npm:^0.20.0"
     cross-env: "npm:^5.0.0"
@@ -10106,27 +10106,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/widget-meet@workspace:*, @webex/widget-meet@workspace:packages/@webex/widget-meet":
+"@webex/widget-meet@npm:0.211.0, @webex/widget-meet@workspace:packages/@webex/widget-meet":
   version: 0.0.0-use.local
   resolution: "@webex/widget-meet@workspace:packages/@webex/widget-meet"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@webex/components": "npm:^1.274.3"
-    "@webex/react-component-button-controls": "workspace:*"
-    "@webex/react-component-incoming-call": "workspace:*"
-    "@webex/react-component-loading-screen": "workspace:*"
-    "@webex/react-component-ringtone": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/react-container-notifications": "workspace:*"
-    "@webex/react-container-presence-avatar": "workspace:*"
-    "@webex/redux-module-activities": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-errors": "workspace:*"
-    "@webex/redux-module-media": "workspace:*"
-    "@webex/redux-module-mercury": "workspace:*"
-    "@webex/redux-module-spaces": "workspace:*"
-    "@webex/redux-module-users": "workspace:*"
-    "@webex/webex-widget-base": "workspace:*"
+    "@webex/react-component-button-controls": "npm:0.211.0"
+    "@webex/react-component-incoming-call": "npm:0.211.0"
+    "@webex/react-component-loading-screen": "npm:0.211.0"
+    "@webex/react-component-ringtone": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/react-container-notifications": "npm:0.211.0"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
+    "@webex/redux-module-activities": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-errors": "npm:0.211.0"
+    "@webex/redux-module-media": "npm:0.211.0"
+    "@webex/redux-module-mercury": "npm:0.211.0"
+    "@webex/redux-module-spaces": "npm:0.211.0"
+    "@webex/redux-module-users": "npm:0.211.0"
+    "@webex/webex-widget-base": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
@@ -10145,18 +10145,18 @@ __metadata:
   resolution: "@webex/widget-meetings@workspace:packages/@webex/widget-meetings"
   dependencies:
     "@babel/node": "npm:^7.8.3"
-    "@webex/react-component-button-controls": "workspace:*"
-    "@webex/react-component-error-display": "workspace:*"
-    "@webex/react-component-loading-screen": "workspace:*"
-    "@webex/react-component-video": "workspace:*"
-    "@webex/react-container-presence-avatar": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-errors": "workspace:*"
-    "@webex/redux-module-meetings": "workspace:*"
-    "@webex/redux-module-mercury": "workspace:*"
-    "@webex/redux-module-presence": "workspace:*"
-    "@webex/redux-module-users": "workspace:*"
-    "@webex/webex-widget-base": "workspace:*"
+    "@webex/react-component-button-controls": "npm:0.211.0"
+    "@webex/react-component-error-display": "npm:0.211.0"
+    "@webex/react-component-loading-screen": "npm:0.211.0"
+    "@webex/react-component-video": "npm:0.211.0"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-errors": "npm:0.211.0"
+    "@webex/redux-module-meetings": "npm:0.211.0"
+    "@webex/redux-module-mercury": "npm:0.211.0"
+    "@webex/redux-module-presence": "npm:0.211.0"
+    "@webex/redux-module-users": "npm:0.211.0"
+    "@webex/webex-widget-base": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     prop-types: "npm:^15.5.10"
@@ -10169,34 +10169,34 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/widget-message@workspace:*, @webex/widget-message@workspace:packages/@webex/widget-message":
+"@webex/widget-message@npm:0.211.0, @webex/widget-message@workspace:packages/@webex/widget-message":
   version: 0.0.0-use.local
   resolution: "@webex/widget-message@workspace:packages/@webex/widget-message"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-confirmation-modal": "workspace:*"
-    "@webex/react-component-cover": "workspace:*"
-    "@webex/react-component-error-display": "workspace:*"
-    "@webex/react-component-loading-screen": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/react-container-activity-list": "workspace:*"
-    "@webex/react-container-message-composer": "workspace:*"
-    "@webex/react-container-notifications": "workspace:*"
-    "@webex/react-container-read-receipts": "workspace:*"
-    "@webex/react-container-scrolling-activity": "workspace:*"
-    "@webex/react-hoc-conversation-mercury": "workspace:*"
-    "@webex/react-redux-spark": "workspace:*"
-    "@webex/redux-module-activity": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
-    "@webex/redux-module-features": "workspace:*"
-    "@webex/redux-module-flags": "workspace:*"
-    "@webex/redux-module-indicators": "workspace:*"
-    "@webex/redux-module-mercury": "workspace:*"
-    "@webex/redux-module-presence": "workspace:*"
-    "@webex/redux-module-share": "workspace:*"
-    "@webex/webex-widget-base": "workspace:*"
+    "@webex/react-component-confirmation-modal": "npm:0.211.0"
+    "@webex/react-component-cover": "npm:0.211.0"
+    "@webex/react-component-error-display": "npm:0.211.0"
+    "@webex/react-component-loading-screen": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/react-container-activity-list": "npm:0.211.0"
+    "@webex/react-container-message-composer": "npm:0.211.0"
+    "@webex/react-container-notifications": "npm:0.211.0"
+    "@webex/react-container-read-receipts": "npm:0.211.0"
+    "@webex/react-container-scrolling-activity": "npm:0.211.0"
+    "@webex/react-hoc-conversation-mercury": "npm:0.211.0"
+    "@webex/react-redux-spark": "npm:0.211.0"
+    "@webex/redux-module-activity": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
+    "@webex/redux-module-features": "npm:0.211.0"
+    "@webex/redux-module-flags": "npm:0.211.0"
+    "@webex/redux-module-indicators": "npm:0.211.0"
+    "@webex/redux-module-mercury": "npm:0.211.0"
+    "@webex/redux-module-presence": "npm:0.211.0"
+    "@webex/redux-module-share": "npm:0.211.0"
+    "@webex/webex-widget-base": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     core-decorators: "npm:^0.20.0"
     cross-env: "npm:^5.0.0"
@@ -10234,28 +10234,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/widget-recents@workspace:*, @webex/widget-recents@workspace:packages/@webex/widget-recents":
+"@webex/widget-recents@npm:0.211.0, @webex/widget-recents@workspace:packages/@webex/widget-recents":
   version: 0.0.0-use.local
   resolution: "@webex/widget-recents@workspace:packages/@webex/widget-recents"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-error-display": "workspace:*"
-    "@webex/react-component-loading-screen": "workspace:*"
-    "@webex/react-component-spaces-list": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/react-container-presence-avatar": "workspace:*"
-    "@webex/redux-module-activities": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-errors": "workspace:*"
-    "@webex/redux-module-features": "workspace:*"
-    "@webex/redux-module-media": "workspace:*"
-    "@webex/redux-module-mercury": "workspace:*"
-    "@webex/redux-module-presence": "workspace:*"
-    "@webex/redux-module-spaces": "workspace:*"
-    "@webex/redux-module-teams": "workspace:*"
-    "@webex/redux-module-users": "workspace:*"
-    "@webex/webex-widget-base": "workspace:*"
+    "@webex/react-component-error-display": "npm:0.211.0"
+    "@webex/react-component-loading-screen": "npm:0.211.0"
+    "@webex/react-component-spaces-list": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/react-container-presence-avatar": "npm:0.211.0"
+    "@webex/redux-module-activities": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-errors": "npm:0.211.0"
+    "@webex/redux-module-features": "npm:0.211.0"
+    "@webex/redux-module-media": "npm:0.211.0"
+    "@webex/redux-module-mercury": "npm:0.211.0"
+    "@webex/redux-module-presence": "npm:0.211.0"
+    "@webex/redux-module-spaces": "npm:0.211.0"
+    "@webex/redux-module-teams": "npm:0.211.0"
+    "@webex/redux-module-users": "npm:0.211.0"
+    "@webex/webex-widget-base": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     core-decorators: "npm:^0.20.0"
     cross-env: "npm:^5.0.0"
@@ -10272,23 +10272,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/widget-roster@workspace:*, @webex/widget-roster@workspace:packages/@webex/widget-roster":
+"@webex/widget-roster@npm:0.211.0, @webex/widget-roster@workspace:packages/@webex/widget-roster":
   version: 0.0.0-use.local
   resolution: "@webex/widget-roster@workspace:packages/@webex/widget-roster"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-activity-menu-header": "workspace:*"
-    "@webex/react-component-loading-screen": "workspace:*"
-    "@webex/react-component-people-list": "workspace:*"
-    "@webex/react-hoc-conversation-mercury": "workspace:*"
-    "@webex/react-redux-spark": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
-    "@webex/redux-module-media": "workspace:*"
-    "@webex/redux-module-search": "workspace:*"
-    "@webex/redux-module-users": "workspace:*"
-    "@webex/webex-widget-base": "workspace:*"
+    "@webex/react-component-activity-menu-header": "npm:0.211.0"
+    "@webex/react-component-loading-screen": "npm:0.211.0"
+    "@webex/react-component-people-list": "npm:0.211.0"
+    "@webex/react-hoc-conversation-mercury": "npm:0.211.0"
+    "@webex/react-redux-spark": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
+    "@webex/redux-module-media": "npm:0.211.0"
+    "@webex/redux-module-search": "npm:0.211.0"
+    "@webex/redux-module-users": "npm:0.211.0"
+    "@webex/webex-widget-base": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     core-decorators: "npm:^0.20.0"
     cross-env: "npm:^5.0.0"
@@ -10314,31 +10314,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@webex/widget-space@workspace:*, @webex/widget-space@workspace:packages/@webex/widget-space":
+"@webex/widget-space@npm:0.211.0, @webex/widget-space@workspace:packages/@webex/widget-space":
   version: 0.0.0-use.local
   resolution: "@webex/widget-space@workspace:packages/@webex/widget-space"
   dependencies:
     "@babel/node": "npm:^7.8.3"
     "@momentum-ui/react": "npm:23.27.11"
-    "@webex/react-component-activity-menu": "workspace:*"
-    "@webex/react-component-error-display": "workspace:*"
-    "@webex/react-component-loading-screen": "workspace:*"
-    "@webex/react-component-timer": "workspace:*"
-    "@webex/react-component-title-bar": "workspace:*"
-    "@webex/react-component-utils": "workspace:*"
-    "@webex/redux-module-avatar": "workspace:*"
-    "@webex/redux-module-conversation": "workspace:*"
-    "@webex/redux-module-errors": "workspace:*"
-    "@webex/redux-module-features": "workspace:*"
-    "@webex/redux-module-media": "workspace:*"
-    "@webex/redux-module-mercury": "workspace:*"
-    "@webex/redux-module-spaces": "workspace:*"
-    "@webex/redux-module-users": "workspace:*"
-    "@webex/webex-widget-base": "workspace:*"
-    "@webex/widget-files": "workspace:*"
-    "@webex/widget-meet": "workspace:*"
-    "@webex/widget-message": "workspace:*"
-    "@webex/widget-roster": "workspace:*"
+    "@webex/react-component-activity-menu": "npm:0.211.0"
+    "@webex/react-component-error-display": "npm:0.211.0"
+    "@webex/react-component-loading-screen": "npm:0.211.0"
+    "@webex/react-component-timer": "npm:0.211.0"
+    "@webex/react-component-title-bar": "npm:0.211.0"
+    "@webex/react-component-utils": "npm:0.211.0"
+    "@webex/redux-module-avatar": "npm:0.211.0"
+    "@webex/redux-module-conversation": "npm:0.211.0"
+    "@webex/redux-module-errors": "npm:0.211.0"
+    "@webex/redux-module-features": "npm:0.211.0"
+    "@webex/redux-module-media": "npm:0.211.0"
+    "@webex/redux-module-mercury": "npm:0.211.0"
+    "@webex/redux-module-spaces": "npm:0.211.0"
+    "@webex/redux-module-users": "npm:0.211.0"
+    "@webex/webex-widget-base": "npm:0.211.0"
+    "@webex/widget-files": "npm:0.211.0"
+    "@webex/widget-meet": "npm:0.211.0"
+    "@webex/widget-message": "npm:0.211.0"
+    "@webex/widget-roster": "npm:0.211.0"
     classnames: "npm:^2.2.5"
     cross-env: "npm:^5.0.0"
     immutable: "npm:^3.8.1"
