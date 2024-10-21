@@ -111,6 +111,7 @@
     "marked": "^0.7.0",
     "moment": "^2.17.1",
     "netlify": "^1.2.0",
+    "node-gyp": "^10.2.0",
     "prop-types": "^15.5.10",
     "pvutils": "^1.0.17",
     "querystring-es3": "^0.2.1",
