@@ -11,6 +11,7 @@ executors:
         environment:
           AWS_BUCKET: code.s4d.io
           AWS_REGION: us-east-1
+    resource_class: large
 
 # Orb to grab `s3` capability for us
 orbs:
