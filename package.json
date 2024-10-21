@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "babel-node ./scripts/build/index.js",
-    "build:all": "yarn workspaces foreach -A --parallel run build:src",
+    "build:all": "yarn workspaces foreach -A --parallel --jobs 5 run build:src",
     "build:package": "cross-env NODE_ENV=${NODE_ENV:-production} NODE_OPTIONS=--max-old-space-size=2048 yarn run build dist",
     "build:components": "yarn run build components",
     "build:esm": "yarn run build esm",
