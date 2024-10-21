@@ -8,7 +8,7 @@ import messages from './translations/en';
 import events from './events';
 import {destinationTypes} from './constants';
 
-const {eventNames} = events;
+const { eventNames } = events;
 
 export {eventNames};
 
