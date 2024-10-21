@@ -16,7 +16,6 @@ export const elements = {
   widgetTitle: '.webex-title-text',
   stickyButton: '#toggleStickyModeButton'
 };
-
 /**
  * Switches to message widget
  * @param {Object} aBrowser
