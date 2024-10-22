@@ -61,12 +61,12 @@ jobs:
 
       - name: Build packages
         run: yarn run build:all
-      
+
       - name: Run Jest test suites
         env:
           JEST_JUNIT_OUTPUT_NAME: js-jest-results.xml
           JEST_JUNIT_OUTPUT_DIR: reports/junit/jest
-        run: yarn run jest --reporters="jest-junit"
+        run: yarn run jest
 
       - name: Upload Jest test results
         uses: actions/upload-artifact@v3
