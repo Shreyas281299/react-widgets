@@ -17,6 +17,7 @@ export const elements = {
   stickyButton: '#toggleStickyModeButton'
 };
 
+
 /**
  * Switches to message widget
  * @param {Object} aBrowser
