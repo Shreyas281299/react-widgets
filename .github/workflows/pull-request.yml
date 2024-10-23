@@ -24,12 +24,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.13.1
+          cache: 'yarn'
+          yarn-version: '4.5.0'
 
       - name: Clean yarn cache
         run: yarn cache clean
 
       - name: Initialize dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Cache Dependencies
         uses: actions/cache@v3
@@ -66,7 +68,7 @@ jobs:
         env:
           JEST_JUNIT_OUTPUT_NAME: js-jest-results.xml
           JEST_JUNIT_OUTPUT_DIR: reports/junit/jest
-        run: yarn run jest --reporters="jest-junit"
+        run: yarn workspaces foreach -A run test:unit
 
       - name: Upload Jest test results
         uses: actions/upload-artifact@v3
